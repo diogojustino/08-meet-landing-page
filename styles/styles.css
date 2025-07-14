@@ -332,6 +332,7 @@ ul {
   }
   .call_action {
     position: relative;
+    gap: 32px;
   }
   .call_action::before {
     content: url(../assets/desktop/image-hero-left.png);

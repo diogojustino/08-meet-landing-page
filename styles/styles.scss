@@ -316,6 +316,7 @@ ul {
 
   .call_action {
     position: relative;
+    gap: 32px;
     &::before {
       content: url(../assets/desktop/image-hero-left.png);
       position: absolute;
