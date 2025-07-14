@@ -320,6 +320,9 @@ ul {
     --font-size-preset-4: 1.125rem;
     --font-size-preset-5: 1rem;
   }
+  #header_logo {
+    margin-bottom: 87px;
+  }
   #header {
     padding-top: 80px;
     padding-bottom: 64px;
@@ -361,6 +364,9 @@ ul {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .footer_container h2 {
+    width: 445px;
   }
   .footer_container p {
     width: 355px;

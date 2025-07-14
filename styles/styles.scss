@@ -301,6 +301,10 @@ ul {
     --font-size-preset-5: 1rem;
   }
 
+  #header_logo{
+    margin-bottom: 87px;
+  }
+
   #header {
     padding-top: 80px;
     padding-bottom: 64px;
@@ -345,6 +349,9 @@ ul {
     text-align: start;
     justify-content: space-between;
 
+    h2{
+        width: 445px;
+    }
     p{
       width: 355px;
     }
