@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Link](https://07-testimonials-grid-section.vercel.app/)
+- Live Site URL: [Link](https://08-meet-landing-page.vercel.app/))
 
 ## My process
 
