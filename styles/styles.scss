@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+$color-cyan-300: #8fe3f9;
+$color-cyan-600: #4d96a9;
+$color-purple-300: #d9b8ff;
+$color-purple-600: #855fb1;
+$color-slate-300: #d1d1df;
+$color-slate-600: #87879d;
+$color-slate-900: #28283d;
+$color-white: #fafafa;
+
+$font-family: "Red Hat Display", sans-serif;
+
+:root {
+  --font-size-preset-1: 2.5rem;
+  --font-size-preset-2: 2rem;
+  --font-size-preset-3: 0.75rem;
+  --font-size-preset-4: 1rem;
+  --font-size-preset-5: 1rem;
+}
+
+@mixin text-preset-1 {
+  font-family: $font-family;
+  font-size: var(--font-size-preset-1);
+  font-weight: 900;
+  line-height: 110%;
+  letter-spacing: 0rem;
+}
+
+@mixin text-preset-2 {
+  font-family: $font-family;
+  font-size: var(--font-size-preset-2);
+  font-weight: 900;
+  line-height: 110%;
+  letter-spacing: 0rem;
+}
+
+@mixin text-preset-3 {
+  font-family: $font-family;
+  font-size: var(--font-size-preset-3);
+  font-weight: 900;
+  line-height: 110%;
+  letter-spacing: 0.25rem;
+}
+
+@mixin text-preset-4 {
+  font-family: $font-family;
+  font-size: var(--font-size-preset-4);
+  font-weight: 500;
+  line-height: 110%;
+  letter-spacing: 0rem;
+}
+
+@mixin text-preset-5 {
+  font-family: $font-family;
+  font-size: var(--font-size-preset-5);
+  font-weight: 900;
+  line-height: 150%;
+  letter-spacing: 0rem;
+}
+
+@mixin btn_hover($bg, $bg_hover, $span) {
+  background-color: $bg;
+  span {
+    color: $span;
+  }
+  &:hover {
+    background-color: $bg_hover;
+  }
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+}
+
+ul {
+  list-style: none;
+}
+.btn {
+  border: none;
+  white-space: nowrap;
+  padding: 16px 40px;
+  border-radius: 29px;
+  @include text-preset-5;
+  color: $color-white;
+  cursor: pointer;
+  &.cyan {
+    @include btn_hover($color-cyan-600, #71c0d4, $color-cyan-300);
+  }
+  &.purple {
+    @include btn_hover($color-purple-600, #b18bdd, $color-purple-300);
+  }
+}
+
+.divider {
+  @include text-preset-5;
+  background-color: white;
+  margin: 80px auto 0px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid $color-slate-300;
+  color: $color-slate-600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    background-color: $color-slate-300;
+    width: 1px;
+    height: 80px;
+  }
+}
+
+#header {
+  padding-top: 48px;
+  padding-bottom: 32px;
+  overflow: hidden;
+}
+#header_logo {
+  display: block;
+  margin: 0 auto 64px;
+}
+
+#header_people_image {
+  margin: 0 -29px;
+  img {
+    object-fit: fill;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.call_action {
+  width: 305px;
+  margin: 48px auto 0px;
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  text-align: center;
+  h1 {
+    @include text-preset-1;
+    color: $color-slate-900;
+  }
+
+  p {
+    @include text-preset-4;
+    color: $color-slate-600;
+  }
+  .btns {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.section_grid {
+  padding: 64px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  // text-align: center;
+}
+
+.images_grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  // grid-template-columns: repeat(2, 1fr);
+
+  img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.meetings {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 504px;
+  span {
+    @include text-preset-3;
+    display: inline-block;
+    color: $color-cyan-600;
+    margin-bottom: 16px;
+    text-transform: capitalize;
+  }
+
+  h2 {
+    @include text-preset-2;
+    color: $color-slate-900;
+    margin-bottom: 32px;
+  }
+
+  p {
+    @include text-preset-4;
+    color: $color-slate-600;
+  }
+}
+#second_divider {
+  // position: relative;
+  z-index: 1;
+}
+
+#footer {
+  background-image: url(../assets/mobile/image-footer.jpg);
+  // background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    opacity: 0.8;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: $color-cyan-600;
+  }
+}
+
+.footer_container {
+  position: relative;
+  z-index: 2;
+  margin-top: -26px;
+  padding: 64px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  text-align: center;
+  h2 {
+    @include text-preset-2;
+    color: $color-white;
+  }
+
+  p {
+    @include text-preset-4;
+    color: $color-white;
+  }
+}
+
+//tablet
+@media (min-width: 768px) {
+  :root {
+    --font-size-preset-1: 3rem;
+    --font-size-preset-2: 2.25rem;
+    --font-size-preset-3: 0.875rem;
+    --font-size-preset-4: 1rem;
+  }
+
+  #header {
+    padding-bottom: 64px;
+  }
+  #header_people_image {
+  margin: 0 -20px;
+  img {
+    object-fit: fill;
+    width: 100%;
+    height: auto;
+  }
+}
+  .call_action {
+    width: 448px;
+  }
+
+  .images_grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+
+  #footer {
+    background-image: url(../assets/tablet/image-footer.jpg);
+     background-position: center;
+  }
+
+  .footer_container {
+    padding: 64px 133px;
+  }
+}
+
+
+//desktop
+@media (min-width: 1440px) {
+  :root {
+    --font-size-preset-1: 4rem;
+    --font-size-preset-2: 2.5rem;
+    --font-size-preset-3: 1rem;
+    --font-size-preset-4: 1.125rem;
+    --font-size-preset-5: 1rem;
+  }
+
+  #header {
+    padding-top: 80px;
+    padding-bottom: 64px;
+  }
+
+  #header_people_image {
+    display: none;
+  }
+
+  .call_action {
+    position: relative;
+    &::before {
+      content: url(../assets/desktop/image-hero-left.png);
+      position: absolute;
+      top: -23px;
+      left: -100%;
+    }
+    &::after {
+      content: url(../assets/desktop/image-hero-right.png);
+      position: absolute;
+      top: 24px;
+      right: -100%;
+    }
+  }
+
+  .section_grid {
+    padding: 56px;
+    // text-align: center;
+  }
+
+  .meetings {
+    max-width: 544px;
+  }
+  #footer {
+    background-image: url(../assets/desktop/image-footer.jpg);
+    //  background-position: top;
+  }
+
+  .footer_container {
+    padding: 112px 160px;
+    flex-direction: row;
+    text-align: start;
+    justify-content: space-between;
+
+    p{
+      width: 355px;
+    }
+  }
+}

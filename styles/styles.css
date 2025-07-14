@@ -1,0 +1,369 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+:root {
+  --font-size-preset-1: 2.5rem;
+  --font-size-preset-2: 2rem;
+  --font-size-preset-3: 0.75rem;
+  --font-size-preset-4: 1rem;
+  --font-size-preset-5: 1rem;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+.btn {
+  border: none;
+  white-space: nowrap;
+  padding: 16px 40px;
+  border-radius: 29px;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: var(--font-size-preset-5);
+  font-weight: 900;
+  line-height: 150%;
+  letter-spacing: 0rem;
+  color: #fafafa;
+  cursor: pointer;
+}
+
+.btn.cyan {
+  background-color: #4d96a9;
+}
+
+.btn.cyan span {
+  color: #8fe3f9;
+}
+
+.btn.cyan:hover {
+  background-color: #71c0d4;
+}
+
+.btn.purple {
+  background-color: #855fb1;
+}
+
+.btn.purple span {
+  color: #d9b8ff;
+}
+
+.btn.purple:hover {
+  background-color: #b18bdd;
+}
+
+.divider {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: var(--font-size-preset-5);
+  font-weight: 900;
+  line-height: 150%;
+  letter-spacing: 0rem;
+  background-color: white;
+  margin: 80px auto 0px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid #d1d1df;
+  color: #87879d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  background-color: #d1d1df;
+  width: 1px;
+  height: 80px;
+}
+
+#header {
+  padding-top: 48px;
+  padding-bottom: 32px;
+  overflow: hidden;
+}
+
+#header_logo {
+  display: block;
+  margin: 0 auto 64px;
+}
+
+#header_people_image {
+  margin: 0 -29px;
+}
+
+#header_people_image img {
+  -o-object-fit: fill;
+     object-fit: fill;
+  width: 100%;
+  height: auto;
+}
+
+.call_action {
+  width: 305px;
+  margin: 48px auto 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.call_action h1 {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: var(--font-size-preset-1);
+  font-weight: 900;
+  line-height: 110%;
+  letter-spacing: 0rem;
+  color: #28283d;
+}
+
+.call_action p {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: var(--font-size-preset-4);
+  font-weight: 500;
+  line-height: 110%;
+  letter-spacing: 0rem;
+  color: #87879d;
+}
+
+.call_action .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section_grid {
+  padding: 64px 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 64px;
+}
+
+.images_grid {
+  display: -ms-grid;
+  display: grid;
+  gap: 16px;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.images_grid img {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+}
+
+.meetings {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 504px;
+}
+
+.meetings span {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: var(--font-size-preset-3);
+  font-weight: 900;
+  line-height: 110%;
+  letter-spacing: 0.25rem;
+  display: inline-block;
+  color: #4d96a9;
+  margin-bottom: 16px;
+  text-transform: capitalize;
+}
+
+.meetings h2 {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: var(--font-size-preset-2);
+  font-weight: 900;
+  line-height: 110%;
+  letter-spacing: 0rem;
+  color: #28283d;
+  margin-bottom: 32px;
+}
+
+.meetings p {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: var(--font-size-preset-4);
+  font-weight: 500;
+  line-height: 110%;
+  letter-spacing: 0rem;
+  color: #87879d;
+}
+
+#second_divider {
+  z-index: 1;
+}
+
+#footer {
+  background-image: url(../assets/mobile/image-footer.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+#footer::before {
+  content: "";
+  position: absolute;
+  opacity: 0.8;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #4d96a9;
+}
+
+.footer_container {
+  position: relative;
+  z-index: 2;
+  margin-top: -26px;
+  padding: 64px 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.footer_container h2 {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: var(--font-size-preset-2);
+  font-weight: 900;
+  line-height: 110%;
+  letter-spacing: 0rem;
+  color: #fafafa;
+}
+
+.footer_container p {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: var(--font-size-preset-4);
+  font-weight: 500;
+  line-height: 110%;
+  letter-spacing: 0rem;
+  color: #fafafa;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --font-size-preset-1: 3rem;
+    --font-size-preset-2: 2.25rem;
+    --font-size-preset-3: 0.875rem;
+    --font-size-preset-4: 1rem;
+  }
+  #header {
+    padding-bottom: 64px;
+  }
+  #header_people_image {
+    margin: 0 -20px;
+  }
+  #header_people_image img {
+    -o-object-fit: fill;
+       object-fit: fill;
+    width: 100%;
+    height: auto;
+  }
+  .call_action {
+    width: 448px;
+  }
+  .images_grid {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+  #footer {
+    background-image: url(../assets/tablet/image-footer.jpg);
+    background-position: center;
+  }
+  .footer_container {
+    padding: 64px 133px;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --font-size-preset-1: 4rem;
+    --font-size-preset-2: 2.5rem;
+    --font-size-preset-3: 1rem;
+    --font-size-preset-4: 1.125rem;
+    --font-size-preset-5: 1rem;
+  }
+  #header {
+    padding-top: 80px;
+    padding-bottom: 64px;
+  }
+  #header_people_image {
+    display: none;
+  }
+  .call_action {
+    position: relative;
+  }
+  .call_action::before {
+    content: url(../assets/desktop/image-hero-left.png);
+    position: absolute;
+    top: -23px;
+    left: -100%;
+  }
+  .call_action::after {
+    content: url(../assets/desktop/image-hero-right.png);
+    position: absolute;
+    top: 24px;
+    right: -100%;
+  }
+  .section_grid {
+    padding: 56px;
+  }
+  .meetings {
+    max-width: 544px;
+  }
+  #footer {
+    background-image: url(../assets/desktop/image-footer.jpg);
+  }
+  .footer_container {
+    padding: 112px 160px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    text-align: start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer_container p {
+    width: 355px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
